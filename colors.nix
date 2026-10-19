@@ -78,7 +78,23 @@ rec {
     # themed color vars
 
     # blue
+    blue_border = {
+      color_light = vars.blue;
+      color_dark  = vars.blue;
+    };
+    blue_bg = {
+      color_light = vars.blue;
+      color_dark  = vars.blue;
+    };
+    blue_xlight_border = {
+      color_light = vars.blue_xlight;
+      color_dark  = vars.blue_xlight;
+    };
     blue_xxlight_border = {
+      color_light = vars.blue_xxlight;
+      color_dark  = vars.blue_xlight;
+    };
+    blue_xxlight_bg = {
       color_light = vars.blue_xxlight;
       color_dark  = vars.blue_xlight;
     };
@@ -100,9 +116,17 @@ rec {
       color_light = vars.green;
       color_dark  = vars.green;
     };
+    green_bg = {
+      color_light = vars.green;
+      color_dark  = vars.green;
+    };
     green_light_border = {
       color_light = vars.green_light;
       color_dark  = vars.green;
+    };
+    green_light_bg = {
+      color_light = vars.green_light;
+      color_dark  = vars.green_light;
     };
     green_deep_dark_fg = {
       color_light = vars.green_deep_dark;
@@ -118,9 +142,21 @@ rec {
       color_light = vars.orange;
       color_dark  = vars.orange;
     };
+    orange_bg = {
+      color_light = vars.orange;
+      color_dark  = vars.orange;
+    };
     orange_xlight_border = {
       color_light = vars.orange_xlight;
       color_dark  = vars.orange;
+    };
+    orange_shallow_light_border = {
+      color_light = vars.orange_shallow_light;
+      color_dark  = vars.orange;
+    };
+    orange_shallow_light_bg = {
+      color_light = vars.orange_shallow_light;
+      color_dark  = vars.orange_shallow_light;
     };
     orange_deep_fg = {
       color_light = vars.orange_deep;
@@ -155,6 +191,14 @@ rec {
     pink_xxxxlight_border = {
       color_light = vars.pink_xxxxlight;
       color_dark  = vars.pink_xxxlight;
+    };
+    pink_xxxxlight_bg = {
+      color_light = vars.pink_xxxxlight;
+      color_dark  = vars.pink_xxxxlight;
+    };
+    pink_xxxxxxlight_bg = {
+      color_light = vars.pink_xxxxxxlight;
+      color_dark  = vars.pink_xxxxlight;
     };
 
     # gray
