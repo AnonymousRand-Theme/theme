@@ -78,6 +78,10 @@ rec {
     # themed color vars
 
     # blue
+    blue_xxlight_border = {
+      color_light = vars.blue_xxlight;
+      color_dark  = vars.blue_xlight;
+    };
     blue_deep_dark_fg = {
       color_light = vars.blue_deep_dark;
       color_dark  = vars.blue_light;
@@ -96,6 +100,10 @@ rec {
       color_light = vars.green;
       color_dark  = vars.green;
     };
+    green_light_border = {
+      color_light = vars.green_light;
+      color_dark  = vars.green;
+    };
     green_deep_dark_fg = {
       color_light = vars.green_deep_dark;
       color_dark  = vars.green_deep;
@@ -108,6 +116,10 @@ rec {
     # orange
     orange_border = {
       color_light = vars.orange;
+      color_dark  = vars.orange;
+    };
+    orange_xlight_border = {
+      color_light = vars.orange_xlight;
       color_dark  = vars.orange;
     };
     orange_deep_fg = {
@@ -138,6 +150,10 @@ rec {
     };
     pink_xxxlight_fg = {
       color_light = vars.pink_xxxlight;
+      color_dark  = vars.pink_xxxlight;
+    };
+    pink_xxxxlight_border = {
+      color_light = vars.pink_xxxxlight;
       color_dark  = vars.pink_xxxlight;
     };
 
