@@ -1,3 +1,9 @@
 [submodule "files/personal_website"]
 	path = files/personal_website
 	url = ssh://git@git.anonymousrand.xyz:2222/AnonymousRand-Theme/personal_website.git
+[submodule "files/nix_config"]
+	path = files/nix_config
+	url = ssh://git@git.anonymousrand.xyz:2222/AnonymousRand-Theme/nix_config.git
+[submodule "files/git_server"]
+	path = files/git_server
+	url = ssh://git@git.anonymousrand.xyz:2222/AnonymousRand-Theme/git_server.git

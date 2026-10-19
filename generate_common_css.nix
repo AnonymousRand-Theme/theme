@@ -3,7 +3,7 @@ colors:
 let
   generateCssStr = lines: ''
     :root {
-      ${lib.concatStringsSep "\n  " (lines lib)}
+      ${lib.concatStringsSep "\n  " lines}
     }
   '';
 
@@ -98,8 +98,8 @@ let
   ];
 in
 {
-  colors     = generateCssStr "colors.css" colorsLines;
-  autoTheme  = generateCssStr "noctalia_auto_theme.css" autoThemeLines;
-  lightTheme = generateCssStr "light_theme.css" lightThemeLines;
-  darkTheme  = generateCssStr "dark_theme.css" darkThemeLines;
+  colors     = generateCssStr colorsLines;
+  autoTheme  = generateCssStr autoThemeLines;
+  lightTheme = generateCssStr lightThemeLines;
+  darkTheme  = generateCssStr darkThemeLines;
 }
