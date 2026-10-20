@@ -12,7 +12,7 @@
       colors = import ./sources/colors.nix;
 
       generatedCommonCss =
-        import ./configs/generate_common_css.nix colors { inherit lib; };
+        import ./sources/css/generate_common_css.nix colors { inherit lib; };
 
       persWebDarkreaderFixes =
         import ./configs/personal_website/css/generate_darkreader_fixes.nix colors { inherit lib; };
@@ -60,28 +60,30 @@
 
           mkdir -p "$out/nix_config/"
           mkdir -p "$out/nix_config/css/"
+          mkdir -p "$out/nix_config/scss/"
 
           mkdir -p "$out/personal_website/"
-          mkdir -p "$out/personal_website/css/"
           mkdir -p "$out/personal_website/fonts/"
+          mkdir -p "$out/personal_website/css/"
           mkdir -p "$out/personal_website/scss/"
 
           mkdir -p "$out/git_server/"
-          mkdir -p "$out/git_server/css/"
           mkdir -p "$out/git_server/fonts/"
+          mkdir -p "$out/git_server/css/"
 
           ######################################################################
           # copy to output directories
 
-          # fonts
           # `rsync` instead of `cp` allows us to recurse *and* not have to manually create subdirs
           rsync -r --exclude='*.sfd' \
             "$src/fonts/" "$out/personal_website/fonts/"
           rsync -r --exclude='*.sfd' --exclude='hachi_maru_pop.ttf' \
             "$src/fonts/" "$out/git_server/fonts/"
 
-          # colors
           cp "$src/colors.nix" "$out/nix_config/_colors.nix"
+
+          cp -r "$src"/scss/* "$out/nix_config/scss/"
+          cp -r "$src"/scss/* "$out/personal_website/scss/"
 
           cp "$generatedCommonCssColorsPath" "$out/nix_config/css/colors.css"
           cp "$generatedCommonCssColorsPath" "$out/personal_website/css/colors.css"

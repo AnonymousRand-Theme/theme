@@ -1,7 +1,7 @@
 colors:
 { lib }:
 let
-  cssVarName = name: (import ./get_css_var_name.nix name { inherit lib; }).output;
+  cssVarName = name: (import ../../utils/get_css_var_name.nix name { inherit lib; }).output;
 
   generateCssStr = lines: ''
     :root {
