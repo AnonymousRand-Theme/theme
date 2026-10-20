@@ -11,9 +11,12 @@
 
       colors = import ./colors.nix;
 
-      generatedCss =
-        import ./generate_common_css.nix colors { inherit lib pkgs; };
-      personalWebsiteCustBootstrap =
+      generatedCommonCss =
+        import ./files/generate_common_css.nix colors { inherit lib; };
+
+      persWebDarkreaderFixes =
+        import ./files/personal_website/css/generate_darkreader_fixes.nix colors { inherit lib; };
+      persWebCustBootstrap =
         import ./files/personal_website/scss/custom_bootstrap.nix colors;
     in
     {
@@ -26,21 +29,28 @@
         # this passes the listed strings to the build/install environment as temporary files,
         # whose filenames are environment variables carrying the name of their attr name + "Path"
         passAsFile = [
-          "generatedCssColors"
-          "generatedCssAutoTheme"
-          "generatedCssLightTheme"
-          "generatedCssDarkTheme"
-          "personalWebsiteCustBootstrap"
+          "generatedCommonCssColors"
+          "generatedCommonCssAutoTheme"
+          "generatedCommonCssLightTheme"
+          "generatedCommonCssDarkTheme"
+
+          "persWebDarkreaderFixes"
+          "persWebCustBootstrap"
         ];
-        generatedCssColors           = generatedCss.colors;
-        generatedCssAutoTheme        = generatedCss.autoTheme;
-        generatedCssLightTheme       = generatedCss.lightTheme;
-        generatedCssDarkTheme        = generatedCss.darkTheme;
-        personalWebsiteCustBootstrap = personalWebsiteCustBootstrap.output;
+        generatedCommonCssColors     = generatedCommonCss.colors;
+        generatedCommonCssAutoTheme  = generatedCommonCss.autoTheme;
+        generatedCommonCssLightTheme = generatedCommonCss.lightTheme;
+        generatedCommonCssDarkTheme  = generatedCommonCss.darkTheme;
+
+        persWebDarkreaderFixes  = persWebDarkreaderFixes.output;
+        persWebCustBootstrap    = persWebCustBootstrap.output;
 
         mainColorsFile = ./colors.nix;
 
         installPhase = ''
+          set -euo pipefail
+          set -x
+
           mkdir -p $out/
           mkdir -p $out/nix_config/
           mkdir -p $out/nix_config/css/
@@ -51,21 +61,23 @@
 
           cp "$mainColorsFile" "$out/nix_config/_colors.nix"
 
-          cp "$generatedCssColorsPath" "$out/nix_config/css/colors.css"
-          cp "$generatedCssColorsPath" "$out/personal_website/css/colors.css"
-          cp "$generatedCssColorsPath" "$out/git_server/colors.css"
+          cp "$generatedCommonCssColorsPath" "$out/nix_config/css/colors.css"
+          cp "$generatedCommonCssColorsPath" "$out/personal_website/css/colors.css"
+          cp "$generatedCommonCssColorsPath" "$out/git_server/colors.css"
 
-          cp "$generatedCssAutoThemePath" "$out/nix_config/css/noctalia_auto_theme.css"
+          cp "$generatedCommonCssAutoThemePath" "$out/nix_config/css/noctalia_auto_theme.css"
 
-          cp "$generatedCssLightThemePath" "$out/nix_config/css/light_theme.css"
-          cp "$generatedCssLightThemePath" "$out/personal_website/css/light_theme.css"
-          cp "$generatedCssLightThemePath" "$out/git_server/theme-anonymousrand_light.css"
+          cp "$generatedCommonCssLightThemePath" "$out/nix_config/css/light_theme.css"
+          cp "$generatedCommonCssLightThemePath" "$out/personal_website/css/light_theme.css"
+          cp "$generatedCommonCssLightThemePath" "$out/git_server/theme-anonymousrand_light.css"
 
-          cp "$generatedCssDarkThemePath" "$out/nix_config/css/dark_theme.css"
-          cp "$generatedCssDarkThemePath" "$out/personal_website/css/dark_theme.css"
-          cp "$generatedCssDarkThemePath" "$out/git_server/theme-anonymousrand_dark.css"
+          cp "$generatedCommonCssDarkThemePath" "$out/nix_config/css/dark_theme.css"
+          # commented out since currently personal website does not use this
+          # cp "$generatedCommonCssDarkThemePath" "$out/personal_website/css/dark_theme.css"
+          cp "$generatedCommonCssDarkThemePath" "$out/git_server/theme-anonymousrand_dark.css"
 
-          cp "$personalWebsiteCustBootstrapPath" "$out/personal_website/scss/custom_bootstrap.scss"
+          cp "$persWebDarkreaderFixesPath" "$out/personal_website/css/darkreader_fixes.css"
+          cp "$persWebCustBootstrapPath"   "$out/personal_website/scss/custom_bootstrap.scss"
         '';
       };
     };
