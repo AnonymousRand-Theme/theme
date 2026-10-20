@@ -26,6 +26,10 @@
         src = ./sources;
         dontUnpack = true;
 
+        nativeBuildInputs = [
+          pkgs.rsync
+        ];
+
         # this passes the listed strings to the build/install environment as temporary files,
         # whose filenames are environment variables carrying the name of their attr name + "Path"
         passAsFile = [
@@ -69,10 +73,15 @@
           ######################################################################
           # copy to output directories
 
-          cp    "$src/colors.nix"           "$out/nix_config/_colors.nix"
-          cp -r "$src"/fonts/*              "$out/personal_website/fonts/"
-          cp -r "$src"/fonts/quicksand*     "$out/git_server/fonts/"
-          cp -r "$src"/fonts/maple_mono_nl* "$out/git_server/fonts/"
+          # fonts
+          # `rsync` instead of `cp` allows us to recurse *and* not have to manually create subdirs
+          rsync -r --exclude='*.sfd' \
+            "$src/fonts/" "$out/personal_website/fonts/"
+          rsync -r --exclude='*.sfd' --exclude='hachi_maru_pop.ttf' \
+            "$src/fonts/" "$out/git_server/fonts/"
+
+          # colors
+          cp "$src/colors.nix" "$out/nix_config/_colors.nix"
 
           cp "$generatedCommonCssColorsPath" "$out/nix_config/css/colors.css"
           cp "$generatedCommonCssColorsPath" "$out/personal_website/css/colors.css"
@@ -86,7 +95,7 @@
 
           cp "$generatedCommonCssDarkThemePath" "$out/nix_config/css/dark_theme.css"
           # commented out since currently personal website does not use this
-          # cp "$generatedCommonCssDarkThemePath" "$out/personal_website/css/dark_theme.css"
+          #cp "$generatedCommonCssDarkThemePath" "$out/personal_website/css/dark_theme.css"
           cp "$generatedCommonCssDarkThemePath" "$out/git_server/css/theme-anonymousrand_dark.css"
 
           cp "$persWebDarkreaderFixesPath" "$out/personal_website/css/darkreader_fixes.css"
