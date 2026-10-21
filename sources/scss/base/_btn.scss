@@ -12,70 +12,70 @@
 @mixin apply-surfs-to-btns($default-surfs, $variant-1-surfs, $variant-2-surfs, $selected-surfs) {
   @if list.length($default-surfs) > 0 {
     #{$default-surfs} {
-      --btn-flat-border-color: var(---btn-flat-border-color);
-      --btn-flat-hover-bg:     var(---btn-flat-hover-bg);
-      --btn-flat-hover-fg:     var(---btn-flat-hover-fg);
+      --btn-flat-border-color: var(---color-btn-flat-border);
+      --btn-flat-hover-bg:     var(---color-btn-flat-hover-bg);
+      --btn-flat-hover-fg:     var(---color-btn-flat-hover-fg);
 
-      --btn-raised-border-color: var(---btn-raised-border-color);
-      --btn-raised-base-bg:      var(---btn-raised-base-bg);
-      --btn-raised-base-fg:      var(---btn-raised-base-fg);
+      --btn-raised-border-color: var(---color-btn-raised-border);
+      --btn-raised-base-bg:      var(---color-btn-raised-base-bg);
+      --btn-raised-base-fg:      var(---color-btn-raised-base-fg);
 
-      --btn-xraised-border-color: var(---btn-xraised-border-color);
-      --btn-xraised-base-bg:      var(---btn-xraised-base-bg);
-      --btn-xraised-base-fg:      var(---btn-xraised-base-fg);
+      --btn-xraised-border-color: var(---color-btn-xraised-border);
+      --btn-xraised-base-bg:      var(---color-btn-xraised-base-bg);
+      --btn-xraised-base-fg:      var(---color-btn-xraised-base-fg);
 
-      --btn-selected-border-color: var(---btn-selected-border-color);
-      --btn-selected-base-bg:      var(---btn-selected-base-bg);
-      --btn-selected-base-fg:      var(---btn-selected-base-fg);
+      --btn-selected-border-color: var(---color-btn-selected-border);
+      --btn-selected-base-bg:      var(---color-btn-selected-base-bg);
+      --btn-selected-base-fg:      var(---color-btn-selected-base-fg);
     }
   }
 
   @if list.length($variant-1-surfs) > 0 {
     #{$variant-1-surfs} {
-      --btn-flat-border-color: var(---btn-flat-border-vrnt-1-color);
-      --btn-flat-hover-bg:     var(---btn-flat-hover-bg-vrnt-1);
-      --btn-flat-hover-fg:     var(---btn-flat-hover-fg-vrnt-1);
+      --btn-flat-border-color: var(---color-btn-flat-border-vrnt-1);
+      --btn-flat-hover-bg:     var(---color-btn-flat-hover-bg-vrnt-1);
+      --btn-flat-hover-fg:     var(---color-btn-flat-hover-fg-vrnt-1);
 
-      --btn-raised-border-color: var(---btn-raised-border-vrnt-1-color);
-      --btn-raised-base-bg:      var(---btn-raised-base-bg-vrnt-1);
-      --btn-raised-base-fg:      var(---btn-raised-base-fg-vrnt-1);
+      --btn-raised-border-color: var(---color-btn-raised-border-vrnt-1);
+      --btn-raised-base-bg:      var(---color-btn-raised-base-bg-vrnt-1);
+      --btn-raised-base-fg:      var(---color-btn-raised-base-fg-vrnt-1);
 
-      --btn-xraised-border-color: var(---btn-xraised-border-vrnt-1-color);
-      --btn-xraised-base-bg:      var(---btn-xraised-base-bg-vrnt-1);
-      --btn-xraised-base-fg:      var(---btn-xraised-base-fg-vrnt-1);
+      --btn-xraised-border-color: var(---color-btn-xraised-border-vrnt-1);
+      --btn-xraised-base-bg:      var(---color-btn-xraised-base-bg-vrnt-1);
+      --btn-xraised-base-fg:      var(---color-btn-xraised-base-fg-vrnt-1);
 
-      --btn-selected-border-color: var(---btn-selected-border-vrnt-1-color);
-      --btn-selected-base-bg:      var(---btn-selected-base-bg-vrnt-1);
-      --btn-selected-base-fg:      var(---btn-selected-base-fg-vrnt-1);
+      --btn-selected-border-color: var(---color-btn-selected-border-vrnt-1);
+      --btn-selected-base-bg:      var(---color-btn-selected-base-bg-vrnt-1);
+      --btn-selected-base-fg:      var(---color-btn-selected-base-fg-vrnt-1);
     }
   }
 
   @if list.length($variant-2-surfs) > 0 {
     #{$variant-2-surfs} {
-      --btn-flat-border-color: var(---btn-flat-border-vrnt-2-color);
-      --btn-flat-hover-bg:     var(---btn-flat-hover-bg-vrnt-2);
-      --btn-flat-hover-fg:     var(---btn-flat-hover-fg-vrnt-2);
+      --btn-flat-border-color: var(---color-btn-flat-border-vrnt-2);
+      --btn-flat-hover-bg:     var(---color-btn-flat-hover-bg-vrnt-2);
+      --btn-flat-hover-fg:     var(---color-btn-flat-hover-fg-vrnt-2);
 
-      --btn-raised-border-color: var(---btn-raised-border-vrnt-2-color);
-      --btn-raised-base-bg:      var(---btn-raised-base-bg-vrnt-2);
-      --btn-raised-base-fg:      var(---btn-raised-base-fg-vrnt-2);
+      --btn-raised-border-color: var(---color-btn-raised-border-vrnt-2);
+      --btn-raised-base-bg:      var(---color-btn-raised-base-bg-vrnt-2);
+      --btn-raised-base-fg:      var(---color-btn-raised-base-fg-vrnt-2);
 
-      --btn-xraised-border-color: var(---btn-xraised-border-vrnt-2-color);
-      --btn-xraised-base-bg:      var(---btn-xraised-base-bg-vrnt-2);
-      --btn-xraised-base-fg:      var(---btn-xraised-base-fg-vrnt-2);
+      --btn-xraised-border-color: var(---color-btn-xraised-border-vrnt-2);
+      --btn-xraised-base-bg:      var(---color-btn-xraised-base-bg-vrnt-2);
+      --btn-xraised-base-fg:      var(---color-btn-xraised-base-fg-vrnt-2);
 
-      --btn-selected-border-color: var(---btn-selected-border-vrnt-2-color);
-      --btn-selected-base-bg:      var(---btn-selected-base-bg-vrnt-2);
-      --btn-selected-base-fg:      var(---btn-selected-base-fg-vrnt-2);
+      --btn-selected-border-color: var(---color-btn-selected-border-vrnt-2);
+      --btn-selected-base-bg:      var(---color-btn-selected-base-bg-vrnt-2);
+      --btn-selected-base-fg:      var(---color-btn-selected-base-fg-vrnt-2);
     }
   }
 
   @if list.length($selected-surfs) > 0 {
     #{$selected-surfs} {
-      --btn-flat-border-color:   var(---btn-flat-border-slct-color);
-      --btn-raised-border-color: var(---btn-raised-border-slct-color);
-      --btn-raised-base-bg:      var(---btn-raised-base-bg-slct);
-      --btn-raised-base-fg:      var(---btn-raised-base-fg-slct)
+      --btn-flat-border-color:   var(---color-btn-flat-border-slct-color);
+      --btn-raised-border-color: var(---color-btn-raised-border-slct-color);
+      --btn-raised-base-bg:      var(---color-btn-raised-base-bg-slct);
+      --btn-raised-base-fg:      var(---color-btn-raised-base-fg-slct)
     }
   }
 }
@@ -131,8 +131,8 @@
 
 %btn-flat {
   // don't set base colors so they take the default `inherit`/`transparent` values
-  ----hover-bg: var(--btn-flat-hover-bg, var(----error-color));
-  ----hover-fg: var(--btn-flat-hover-fg, var(----error-color));
+  ----hover-bg: var(--btn-flat-hover-bg, var(---color-error));
+  ----hover-fg: var(--btn-flat-hover-fg, var(---color-error));
   ----active-bg: #{utils.change-lightness(var(----hover-bg), -2.5)};
   ----active-fg: var(----hover-fg);
 
@@ -146,15 +146,15 @@
 
 %btn-raised {
   @include btn-raised-builder(
-    $base-bg: var(--btn-raised-base-bg, var(---error-color)),
-    $base-fg: var(--btn-raised-base-fg, var(---error-color))
+    $base-bg: var(--btn-raised-base-bg, var(---color-error)),
+    $base-fg: var(--btn-raised-base-fg, var(---color-error))
   );
 }
 
 %btn-xraised {
   @include btn-raised-builder(
-    $base-bg: var(--btn-xraised-base-bg, var(---error-color)),
-    $base-fg: var(--btn-xraised-base-fg, var(---error-color))
+    $base-bg: var(--btn-xraised-base-bg, var(---color-error)),
+    $base-fg: var(--btn-xraised-base-fg, var(---color-error))
   );
 }
 
@@ -162,8 +162,8 @@
 // if this is to be changed, remember to add `border-color`
 %btn-selected {
   @include btn-raised-builder(
-    $base-bg: var(--btn-selected-base-bg, var(---error-color)),
-    $base-fg: var(--btn-selected-base-fg, var(---error-color))
+    $base-bg: var(--btn-selected-base-bg, var(---color-error)),
+    $base-fg: var(--btn-selected-base-fg, var(---color-error))
   );
 }
 
