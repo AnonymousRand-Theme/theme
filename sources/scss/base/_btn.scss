@@ -72,8 +72,8 @@
 
   @if list.length($selected-surfs) > 0 {
     #{$selected-surfs} {
-      --btn-flat-border-color:   var(---color-btn-flat-border-slct-color);
-      --btn-raised-border-color: var(---color-btn-raised-border-slct-color);
+      --btn-flat-border-color:   var(---color-btn-flat-border-slct);
+      --btn-raised-border-color: var(---color-btn-raised-border-slct);
       --btn-raised-base-bg:      var(---color-btn-raised-base-bg-slct);
       --btn-raised-base-fg:      var(---color-btn-raised-base-fg-slct)
     }
