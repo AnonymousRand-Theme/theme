@@ -451,6 +451,10 @@ rec {
       color_light = vars.pink_xxxxlight;
       color_dark  = vars.pink_xxxxlight;
     };
+    cursor_strong_bg = {
+      color_light = vars.pink_xxxlight;
+      color_dark  = vars.pink_xxxxlight;
+    };
     cursor_fg = {
       color_light = vars.pink_light;
       color_dark  = vars.pink_light;
