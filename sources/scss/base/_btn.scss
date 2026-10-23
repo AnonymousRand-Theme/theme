@@ -1,4 +1,9 @@
 @use "utils";
+
+// this allows child modules to `@use...with` the variables in `impt` as if they were variables
+// in `_btn.scss`, avoiding having to re-import `impt` and potentially runnning into issues
+@forward "impt";
+// we only need to `@use impt` here to use its functions inside this file
 @use "impt";
 
 @use "sass:list";
