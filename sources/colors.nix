@@ -271,7 +271,7 @@ rec {
     variant_2_border = border_4;
     variant_2_bg = {
       color_light = vars.white;
-      color_dark  = vars.gray_xdark;
+      color_dark  = vars.black;
     };
     variant_2_fg      = pink_xlight_fg;
     variant_2_gray_fg = gray_xdark_fg;
