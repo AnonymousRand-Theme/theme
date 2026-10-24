@@ -14,8 +14,6 @@
       generatedCommonCss =
         import ./sources/css/generate_common_css.nix colors { inherit lib; };
 
-      persWebDarkreaderFixes =
-        import ./configs/personal_website/css/generate_darkreader_fixes.nix colors { inherit lib; };
       persWebCustBootstrap =
         import ./configs/personal_website/scss/custom_bootstrap.nix colors;
     in
@@ -38,7 +36,6 @@
           "generatedCommonCssLightTheme"
           "generatedCommonCssDarkTheme"
 
-          "persWebDarkreaderFixes"
           "persWebCustBootstrap"
         ];
         generatedCommonCssColors     = generatedCommonCss.colors;
@@ -46,8 +43,7 @@
         generatedCommonCssLightTheme = generatedCommonCss.lightTheme;
         generatedCommonCssDarkTheme  = generatedCommonCss.darkTheme;
 
-        persWebDarkreaderFixes = persWebDarkreaderFixes.output;
-        persWebCustBootstrap   = persWebCustBootstrap.output;
+        persWebCustBootstrap = persWebCustBootstrap.output;
 
         installPhase = ''
           set -euo pipefail
@@ -96,11 +92,9 @@
           cp "$generatedCommonCssLightThemePath" "$out/git_server/css/theme-anonymousrand_light.css"
 
           cp "$generatedCommonCssDarkThemePath" "$out/nix_config/css/dark_theme.css"
-          # commented out since currently personal website does not use this
-          #cp "$generatedCommonCssDarkThemePath" "$out/personal_website/css/dark_theme.css"
+          cp "$generatedCommonCssDarkThemePath" "$out/personal_website/css/dark_theme.css"
           cp "$generatedCommonCssDarkThemePath" "$out/git_server/css/theme-anonymousrand_dark.css"
 
-          cp "$persWebDarkreaderFixesPath" "$out/personal_website/css/darkreader_fixes.css"
           cp "$persWebCustBootstrapPath"   "$out/personal_website/scss/custom_bootstrap.scss"
         '';
       };
