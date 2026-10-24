@@ -212,7 +212,7 @@ rec {
     };
     gray_xdark_fg = {
       color_light = vars.gray_xdark;
-      color_dark  = vars.gray_xxlight;
+      color_dark  = vars.gray_xxxlight;
     };
     gray_dark_fg = {
       color_light = vars.gray_dark;
