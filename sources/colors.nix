@@ -176,6 +176,10 @@ rec {
       color_light = vars.pink_light;
       color_dark  = vars.pink_xxxxxlight;
     };
+    pink_xlight_border = {
+      color_light = vars.pink_xlight;
+      color_dark  = vars.pink_xlight;
+    };
     pink_xlight_fg = {
       color_light = vars.pink_xlight;
       color_dark  = vars.pink_xxxxlight;

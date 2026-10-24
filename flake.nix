@@ -13,9 +13,6 @@
 
       generatedCommonCss =
         import ./sources/css/generate_common_css.nix colors { inherit lib; };
-
-      persWebCustBootstrap =
-        import ./configs/personal_website/scss/custom_bootstrap.nix colors;
     in
     {
       packages.${system}.default = pkgs.stdenv.mkDerivation {
@@ -35,15 +32,11 @@
           "generatedCommonCssAutoTheme"
           "generatedCommonCssLightTheme"
           "generatedCommonCssDarkTheme"
-
-          "persWebCustBootstrap"
         ];
         generatedCommonCssColors     = generatedCommonCss.colors;
         generatedCommonCssAutoTheme  = generatedCommonCss.autoTheme;
         generatedCommonCssLightTheme = generatedCommonCss.lightTheme;
         generatedCommonCssDarkTheme  = generatedCommonCss.darkTheme;
-
-        persWebCustBootstrap = persWebCustBootstrap.output;
 
         installPhase = ''
           set -euo pipefail
@@ -94,8 +87,6 @@
           cp "$generatedCommonCssDarkThemePath" "$out/nix_config/css/dark_theme.css"
           cp "$generatedCommonCssDarkThemePath" "$out/personal_website/css/dark_theme.css"
           cp "$generatedCommonCssDarkThemePath" "$out/git_server/css/theme-anonymousrand_dark.css"
-
-          cp "$persWebCustBootstrapPath"   "$out/personal_website/scss/custom_bootstrap.scss"
         '';
       };
     };
