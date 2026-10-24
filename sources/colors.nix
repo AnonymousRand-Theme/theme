@@ -174,11 +174,11 @@ rec {
     # pink
     pink_light_fg = {
       color_light = vars.pink_light;
-      color_dark  = vars.pink_xxxxlight;
+      color_dark  = vars.pink_xxxxxlight;
     };
     pink_xlight_fg = {
       color_light = vars.pink_xlight;
-      color_dark  = vars.pink_xxxlight;
+      color_dark  = vars.pink_xxxxlight;
     };
     pink_xxlight_fg = {
       color_light = vars.pink_xxlight;
@@ -186,7 +186,7 @@ rec {
     };
     pink_xxxlight_fg = {
       color_light = vars.pink_xxxlight;
-      color_dark  = vars.pink_xxxlight;
+      color_dark  = vars.pink_xxlight;
     };
     pink_xxxxlight_border = {
       color_light = vars.pink_xxxxlight;
@@ -232,7 +232,7 @@ rec {
     };
     gray_xxxlight_bg = {
       color_light = vars.gray_xxxlight;
-      color_dark  = vars.gray_xdark;
+      color_dark  = vars.gray_xxdark;
     };
     white_fg = {
       color_light = vars.white;
@@ -584,19 +584,10 @@ rec {
     };
 
     # links
-    link = {
-      color_light = vars.pink_xlight;
-      color_dark  = vars.green_light;
-    };
-    link_hover = {
-      color_light = vars.pink_light;
-      color_dark  = vars.green_xlight;
-    };
-    link_disabled = {
-      color_light = vars.pink_xxxlight;
-      color_dark  = vars.green_deep_xdark;
-    };
-    link_visited = link_hover;
+    link          = pink_xlight_fg;
+    link_hover    = pink_light_fg;
+    link_disabled = pink_xxxlight_fg;
+    link_visited  = link_hover;
 
     ########################################################################
     # button-like elements
