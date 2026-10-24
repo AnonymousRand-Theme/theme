@@ -122,10 +122,10 @@
 }
 
 @mixin btn-raised-builder($base-bg, $base-fg) {
-  ----base-bg: #{$base-bg};
-  ----base-fg: #{$base-fg};
-  ----hover-bg: #{utils.change-lightness(var(----base-bg), -2.5)};
-  ----hover-fg: var(----base-fg);
+  ----base-bg:   #{$base-bg};
+  ----base-fg:   #{$base-fg};
+  ----hover-bg:  #{utils.change-lightness(var(----base-bg), -2.5)};
+  ----hover-fg:  var(----base-fg);
   ----active-bg: #{utils.change-lightness(var(----hover-bg), -2.5)};
   ----active-fg: var(----hover-fg);
 }
