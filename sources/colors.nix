@@ -184,6 +184,10 @@ rec {
       color_light = vars.pink_xxxxlight;
       color_dark  = vars.pink_xxxlight;
     };
+    pink_xxxxxlight_bg = {
+      color_light = vars.pink_xxxxxlight;
+      color_dark  = vars.pink_xxxxlight;
+    };
     pink_xxxxxxlight_bg = {
       color_light = vars.pink_xxxxxxlight;
       color_dark  = vars.pink_xxxxlight;
