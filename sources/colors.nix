@@ -60,7 +60,7 @@ rec {
     gray_light    = "#909090";
     gray_xlight   = "#a8a8a8";
     gray_xxlight  = "#cccccc";
-    gray_xxxlight = "#f0f0f0";
+    gray_xxxlight = "#e8e8e8";
     white         = "#ffffff";
 
     red    = "#ff0000";
