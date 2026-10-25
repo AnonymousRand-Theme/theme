@@ -82,10 +82,6 @@ rec {
       color_light = vars.blue;
       color_dark  = vars.blue;
     };
-    blue_bg = {
-      color_light = vars.blue;
-      color_dark  = vars.blue;
-    };
     blue_xlight_border = {
       color_light = vars.blue_xlight;
       color_dark  = vars.blue_xlight;
@@ -116,10 +112,6 @@ rec {
       color_light = vars.green;
       color_dark  = vars.green;
     };
-    green_bg = {
-      color_light = vars.green;
-      color_dark  = vars.green;
-    };
     green_light_border = {
       color_light = vars.green_light;
       color_dark  = vars.green;
@@ -139,10 +131,6 @@ rec {
 
     # orange
     orange_border = {
-      color_light = vars.orange;
-      color_dark  = vars.orange;
-    };
-    orange_bg = {
       color_light = vars.orange;
       color_dark  = vars.orange;
     };
@@ -195,10 +183,6 @@ rec {
     pink_xxxxlight_border = {
       color_light = vars.pink_xxxxlight;
       color_dark  = vars.pink_xxxlight;
-    };
-    pink_xxxxlight_bg = {
-      color_light = vars.pink_xxxxlight;
-      color_dark  = vars.pink_xxxxlight;
     };
     pink_xxxxxxlight_bg = {
       color_light = vars.pink_xxxxxxlight;
