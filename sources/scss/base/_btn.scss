@@ -106,7 +106,7 @@
   ----curr-fg: var(----base-fg, inherit);
 
   @include impt.style(background-color, var(----curr-bg));
-  @include impt.style(text-background-color, var(----curr-fg));
+  @include impt.style(text-decoration-color, var(----curr-fg));
   @include impt.style(color, var(----curr-fg));
 
   &:hover,
