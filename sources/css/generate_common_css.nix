@@ -19,13 +19,17 @@ let
     "---${cssVarName name}: {{colors.${name}_source.default.hex}};"
   ) colors.themed;
 
-  lightThemeLines = lib.mapAttrsToList (name: value:
-    "---${cssVarName name}: ${colors.themed.${name}.color_light};"
-  ) colors.themed;
+  lightThemeLines = (
+    lib.mapAttrsToList (name: value:
+      "---${cssVarName name}: ${colors.themed.${name}.color_light};"
+    ) colors.themed
+  ) ++ [ "color-scheme: light;" ];
 
-  darkThemeLines = lib.mapAttrsToList (name: value:
-    "---${cssVarName name}: ${colors.themed.${name}.color_dark};"
-  ) colors.themed;
+  darkThemeLines = (
+    lib.mapAttrsToList (name: value:
+      "---${cssVarName name}: ${colors.themed.${name}.color_dark};"
+    ) colors.themed
+  ) ++ [ "color-scheme: dark;" ];
 in
 {
   colors     = generateCssStr colorsLines;
