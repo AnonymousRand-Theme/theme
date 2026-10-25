@@ -12,75 +12,75 @@
 // apply surfs to btns
 //------------------------------------------------------------------------------
 
-// set button-related CSS variables that may depend on the ambient surface here
+// set button-related css variables that may depend on the ambient surface here
 
 @mixin apply-surfs-to-btns($default-surfs, $variant-1-surfs, $variant-2-surfs, $selected-surfs) {
   @if list.length($default-surfs) > 0 {
     #{$default-surfs} {
-      --btn-flat-border-color: var(---color-btn-flat-border);
-      --btn-flat-hover-bg:     var(---color-btn-flat-hover-bg);
-      --btn-flat-hover-fg:     var(---color-btn-flat-hover-fg);
+      --color-btn-flat-border:   var(---color-btn-flat-border);
+      --color-btn-flat-hover-bg: var(---color-btn-flat-hover-bg);
+      --color-btn-flat-hover-fg: var(---color-btn-flat-hover-fg);
 
-      --btn-raised-border-color: var(---color-btn-raised-border);
-      --btn-raised-base-bg:      var(---color-btn-raised-base-bg);
-      --btn-raised-base-fg:      var(---color-btn-raised-base-fg);
+      --color-btn-raised-border:  var(---color-btn-raised-border);
+      --color-btn-raised-base-bg: var(---color-btn-raised-base-bg);
+      --color-btn-raised-base-fg: var(---color-btn-raised-base-fg);
 
-      --btn-xraised-border-color: var(---color-btn-xraised-border);
-      --btn-xraised-base-bg:      var(---color-btn-xraised-base-bg);
-      --btn-xraised-base-fg:      var(---color-btn-xraised-base-fg);
+      --color-btn-xraised-border:  var(---color-btn-xraised-border);
+      --color-btn-xraised-base-bg: var(---color-btn-xraised-base-bg);
+      --color-btn-xraised-base-fg: var(---color-btn-xraised-base-fg);
 
-      --btn-selected-border-color: var(---color-btn-selected-border);
-      --btn-selected-base-bg:      var(---color-btn-selected-base-bg);
-      --btn-selected-base-fg:      var(---color-btn-selected-base-fg);
+      --color-btn-selected-border:  var(---color-btn-selected-border);
+      --color-btn-selected-base-bg: var(---color-btn-selected-base-bg);
+      --color-btn-selected-base-fg: var(---color-btn-selected-base-fg);
     }
   }
 
   @if list.length($variant-1-surfs) > 0 {
     #{$variant-1-surfs} {
-      --btn-flat-border-color: var(---color-btn-flat-border-vrnt-1);
-      --btn-flat-hover-bg:     var(---color-btn-flat-hover-bg-vrnt-1);
-      --btn-flat-hover-fg:     var(---color-btn-flat-hover-fg-vrnt-1);
+      --color-btn-flat-border:   var(---color-btn-flat-border-vrnt-1);
+      --color-btn-flat-hover-bg: var(---color-btn-flat-hover-bg-vrnt-1);
+      --color-btn-flat-hover-fg: var(---color-btn-flat-hover-fg-vrnt-1);
 
-      --btn-raised-border-color: var(---color-btn-raised-border-vrnt-1);
-      --btn-raised-base-bg:      var(---color-btn-raised-base-bg-vrnt-1);
-      --btn-raised-base-fg:      var(---color-btn-raised-base-fg-vrnt-1);
+      --color-btn-raised-border:  var(---color-btn-raised-border-vrnt-1);
+      --color-btn-raised-base-bg: var(---color-btn-raised-base-bg-vrnt-1);
+      --color-btn-raised-base-fg: var(---color-btn-raised-base-fg-vrnt-1);
 
-      --btn-xraised-border-color: var(---color-btn-xraised-border-vrnt-1);
-      --btn-xraised-base-bg:      var(---color-btn-xraised-base-bg-vrnt-1);
-      --btn-xraised-base-fg:      var(---color-btn-xraised-base-fg-vrnt-1);
+      --color-btn-xraised-border:  var(---color-btn-xraised-border-vrnt-1);
+      --color-btn-xraised-base-bg: var(---color-btn-xraised-base-bg-vrnt-1);
+      --color-btn-xraised-base-fg: var(---color-btn-xraised-base-fg-vrnt-1);
 
-      --btn-selected-border-color: var(---color-btn-selected-border-vrnt-1);
-      --btn-selected-base-bg:      var(---color-btn-selected-base-bg-vrnt-1);
-      --btn-selected-base-fg:      var(---color-btn-selected-base-fg-vrnt-1);
+      --color-btn-selected-border:  var(---color-btn-selected-border-vrnt-1);
+      --color-btn-selected-base-bg: var(---color-btn-selected-base-bg-vrnt-1);
+      --color-btn-selected-base-fg: var(---color-btn-selected-base-fg-vrnt-1);
     }
   }
 
   @if list.length($variant-2-surfs) > 0 {
     #{$variant-2-surfs} {
-      --btn-flat-border-color: var(---color-btn-flat-border-vrnt-2);
-      --btn-flat-hover-bg:     var(---color-btn-flat-hover-bg-vrnt-2);
-      --btn-flat-hover-fg:     var(---color-btn-flat-hover-fg-vrnt-2);
+      --color-btn-flat-border:   var(---color-btn-flat-border-vrnt-2);
+      --color-btn-flat-hover-bg: var(---color-btn-flat-hover-bg-vrnt-2);
+      --color-btn-flat-hover-fg: var(---color-btn-flat-hover-fg-vrnt-2);
 
-      --btn-raised-border-color: var(---color-btn-raised-border-vrnt-2);
-      --btn-raised-base-bg:      var(---color-btn-raised-base-bg-vrnt-2);
-      --btn-raised-base-fg:      var(---color-btn-raised-base-fg-vrnt-2);
+      --color-btn-raised-border:  var(---color-btn-raised-border-vrnt-2);
+      --color-btn-raised-base-bg: var(---color-btn-raised-base-bg-vrnt-2);
+      --color-btn-raised-base-fg: var(---color-btn-raised-base-fg-vrnt-2);
 
-      --btn-xraised-border-color: var(---color-btn-xraised-border-vrnt-2);
-      --btn-xraised-base-bg:      var(---color-btn-xraised-base-bg-vrnt-2);
-      --btn-xraised-base-fg:      var(---color-btn-xraised-base-fg-vrnt-2);
+      --color-btn-xraised-border:  var(---color-btn-xraised-border-vrnt-2);
+      --color-btn-xraised-base-bg: var(---color-btn-xraised-base-bg-vrnt-2);
+      --color-btn-xraised-base-fg: var(---color-btn-xraised-base-fg-vrnt-2);
 
-      --btn-selected-border-color: var(---color-btn-selected-border-vrnt-2);
-      --btn-selected-base-bg:      var(---color-btn-selected-base-bg-vrnt-2);
-      --btn-selected-base-fg:      var(---color-btn-selected-base-fg-vrnt-2);
+      --color-btn-selected-border:  var(---color-btn-selected-border-vrnt-2);
+      --color-btn-selected-base-bg: var(---color-btn-selected-base-bg-vrnt-2);
+      --color-btn-selected-base-fg: var(---color-btn-selected-base-fg-vrnt-2);
     }
   }
 
   @if list.length($selected-surfs) > 0 {
     #{$selected-surfs} {
-      --btn-flat-border-color:   var(---color-btn-flat-border-slct);
-      --btn-raised-border-color: var(---color-btn-raised-border-slct);
-      --btn-raised-base-bg:      var(---color-btn-raised-base-bg-slct);
-      --btn-raised-base-fg:      var(---color-btn-raised-base-fg-slct)
+      --color-btn-flat-border:    var(---color-btn-flat-border-slct);
+      --color-btn-raised-border:  var(---color-btn-raised-border-slct);
+      --color-btn-raised-base-bg: var(---color-btn-raised-base-bg-slct);
+      --color-btn-raised-base-fg: var(---color-btn-raised-base-fg-slct)
     }
   }
 }
@@ -130,14 +130,14 @@
   ----active-fg: var(----hover-fg);
 }
 
-// setting variables like `--btn-flat-base-fg` should be left to surfaces (e.g. using surface
+// setting variables like `--color-btn-flat-base-fg` should be left to surfaces (e.g. using surface
 // registries, and individual selectors for more granularity) since they may depend on the color
 // of the ambient surface on which the button sits
 
 %btn-flat {
   // don't set base colors so they take the default `inherit`/`transparent` values
-  ----hover-bg: var(--btn-flat-hover-bg, var(---color-error));
-  ----hover-fg: var(--btn-flat-hover-fg, var(---color-error));
+  ----hover-bg: var(--color-btn-flat-hover-bg, var(---color-error));
+  ----hover-fg: var(--color-btn-flat-hover-fg, var(---color-error));
   ----active-bg: #{utils.change-lightness(var(----hover-bg), -2.5)};
   ----active-fg: var(----hover-fg);
 
@@ -151,24 +151,24 @@
 
 %btn-raised {
   @include btn-raised-builder(
-    $base-bg: var(--btn-raised-base-bg, var(---color-error)),
-    $base-fg: var(--btn-raised-base-fg, var(---color-error))
+    $base-bg: var(--color-btn-raised-base-bg, var(---color-error)),
+    $base-fg: var(--color-btn-raised-base-fg, var(---color-error))
   );
 }
 
 %btn-xraised {
   @include btn-raised-builder(
-    $base-bg: var(--btn-xraised-base-bg, var(---color-error)),
-    $base-fg: var(--btn-xraised-base-fg, var(---color-error))
+    $base-bg: var(--color-btn-xraised-base-bg, var(---color-error)),
+    $base-fg: var(--color-btn-xraised-base-fg, var(---color-error))
   );
 }
 
 // note: there is currently no support for strong raised buttons on selected surfaces
-// if this is to be changed, remember to add `border-color`
+// if this is to be changed, remember to add a border-color
 %btn-selected {
   @include btn-raised-builder(
-    $base-bg: var(--btn-selected-base-bg, var(---color-error)),
-    $base-fg: var(--btn-selected-base-fg, var(---color-error))
+    $base-bg: var(--color-btn-selected-base-bg, var(---color-error)),
+    $base-fg: var(--color-btn-selected-base-fg, var(---color-error))
   );
 }
 
@@ -177,14 +177,14 @@
 //------------------------------------------------------------------------------
 
 @mixin btn-bordered(
-  $border-color: var(--btn-border-color),
+  $border-color: var(--color-btn-border),
   $border-width: 2px
 ) {
   @include impt.style(border, #{$border-width} solid #{$border-color});
 }
 
 @mixin btn-hover-border(
-  $border-color: var(--btn-border-color),
+  $border-color: var(--color-btn-border),
   $border-width: 2px
 ) {
   ----base-border-color:  transparent;
@@ -195,7 +195,7 @@
   @include impt.style(border-color, var(----curr-border-color));
   @include impt.style(outline-color, var(----curr-border-color));
   // match button's `background` transition
-  // unfortunately CSS' `transition` property is maybe the most stupid thing in CSS (well, right
+  // unfortunately css' `transition` property is maybe the most stupid thing in css (well, right
   // after specificity, `position`, cascading, style, sheets, variables not being able to be
   // `inherit`, the need for scss, what the hell all the different whitespace options are, why every
   // fucking type of `display` has different words for centering things, the 2008 housing crash, and
@@ -221,13 +221,13 @@
 // border on hover color may depend on both ambient surface colors and button type (flat/raised)
 // the former is done through surface registries as usual, and the latter is done right here
 %btn-flat {
-  --btn-border-color: var(--btn-flat-border-color);
+  --color-btn-border: var(--color-btn-flat-border);
 }
 
 %btn-raised {
-  --btn-border-color: var(--btn-raised-border-color);
+  --color-btn-border: var(--color-btn-raised-border);
 }
 
 %btn-xraised {
-  --btn-border-color: var(--btn-xraised-border-color);
+  --color-btn-border: var(--color-btn-xraised-border);
 }
