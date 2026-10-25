@@ -82,11 +82,11 @@
 
           cp "$generatedCommonCssLightThemePath" "$out/nix_config/css/light_theme.css"
           cp "$generatedCommonCssLightThemePath" "$out/personal_website/css/light_theme.css"
-          cp "$generatedCommonCssLightThemePath" "$out/git_server/css/theme-anonymousrand_light.css"
+          cp "$generatedCommonCssLightThemePath" "$out/git_server/css/light_theme.css"
 
           cp "$generatedCommonCssDarkThemePath" "$out/nix_config/css/dark_theme.css"
           cp "$generatedCommonCssDarkThemePath" "$out/personal_website/css/dark_theme.css"
-          cp "$generatedCommonCssDarkThemePath" "$out/git_server/css/theme-anonymousrand_dark.css"
+          cp "$generatedCommonCssDarkThemePath" "$out/git_server/css/dark_theme.css"
         '';
       };
     };

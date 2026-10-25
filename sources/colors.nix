@@ -50,7 +50,7 @@ rec {
     pink_xxxlight    = "#ffabd5"; # 330, 33 , 100
     pink_xxxxlight   = "#ffc7e4"; # 329, 22 , 100
     pink_xxxxxlight  = "#ffdbed"; # 330, 14 , 100
-    pink_xxxxxxlight = "#ffe6f2"; # 331, 10 , 100
+    pink_xxxxxxlight = "#ffe8f3"; # 331, 9  , 100
 
     black         = "#000000";
     gray_xxdark   = "#242424";
