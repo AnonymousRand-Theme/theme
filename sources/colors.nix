@@ -224,7 +224,7 @@ rec {
     };
     gray_xxxlight_bg = {
       color_light = vars.gray_xxxlight;
-      color_dark  = vars.gray_xxdark;
+      color_dark  = vars.gray_xdark;
     };
     white_fg = {
       color_light = vars.white;
