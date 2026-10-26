@@ -124,9 +124,9 @@
 @mixin btn-raised-builder($base-bg, $base-fg) {
   ----base-bg:   #{$base-bg};
   ----base-fg:   #{$base-fg};
-  ----hover-bg:  #{utils.change-lightness(var(----base-bg), -2.5)};
+  ----hover-bg:  #{utils.change-lightness(var(----base-bg), utils.$default-interact-light-change)};
   ----hover-fg:  var(----base-fg);
-  ----active-bg: #{utils.change-lightness(var(----hover-bg), -2.5)};
+  ----active-bg: #{utils.change-lightness(var(----hover-bg), utils.$default-interact-light-change)};
   ----active-fg: var(----hover-fg);
 }
 
@@ -138,7 +138,7 @@
   // don't set base colors so they take the default `inherit`/`transparent` values
   ----hover-bg: var(--color-btn-flat-hover-bg, var(---color-error));
   ----hover-fg: var(--color-btn-flat-hover-fg, var(---color-error));
-  ----active-bg: #{utils.change-lightness(var(----hover-bg), -2.5)};
+  ----active-bg: #{utils.change-lightness(var(----hover-bg), utils.$default-interact-light-change)};
   ----active-fg: var(----hover-fg);
 
   %btn-selected & {

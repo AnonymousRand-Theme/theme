@@ -1,5 +1,7 @@
 @use "sass:list";
 
+$default-interact-light-change: -2.5;
+
 @function register-sels($registry, $sels) {
   @return list.join($registry, $sels, comma, false);
 }
