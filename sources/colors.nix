@@ -150,6 +150,10 @@ rec {
       color_light = vars.orange_deep;
       color_dark  = vars.orange;
     };
+    orange_deep_light_fg = {
+      color_light = vars.orange_deep_light;
+      color_dark  = vars.orange;
+    };
     orange_xxdeep_fg = {
       color_light = vars.orange_xxdeep;
       color_dark  = vars.orange_light;
